@@ -2,8 +2,11 @@
 
 This is the replication package for the paper institled "Code Review Practices for Infrastructure-as-Code: An
 Empirical Study on OpenStack Projects". 
+
 Infrastructure-as-code (IaC) allows the automatic management and provisioning of infrastructures using machine-readable specification files. Consequently, developers are able to apply quality assurance practices, such as the code review on the IaC code files.
+
 This paper investigates the code review practices of IaC-related code changes compared to Non-IaC code changes in terms of 10 code review related attributes (the number of reviewers, the number of revisions, review duration, the number of files, churn, added lines, deleted lines, code change description length, number of inline-comments, and number of exchanged messges). 
+
 
 In this repository, we provide,
 
