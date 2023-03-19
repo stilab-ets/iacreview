@@ -1,6 +1,6 @@
 # iacreview
 
-This is the replication package for the paper institled "Code Review Practices for Infrastructure-as-Code: An
+This is the replication package for the paper intitled "Code Review Practices for Infrastructure-as-Code: An
 Empirical Study on OpenStack Projects". 
 
 In this repository, we provide,
