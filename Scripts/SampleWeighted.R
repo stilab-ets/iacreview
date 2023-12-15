@@ -7,8 +7,6 @@ desired_sample_size <- 379
 data<- read.csv("IAC-CodeReviews.csv")
 
 
-
-# Sample one developer from each unique company
 unique_samples <- data %>%
   group_by(Phase) %>%
   sample_n(size = 1) %>%
@@ -20,13 +18,13 @@ remaining_slots <- desired_sample_size - nrow(unique_samples)
 # Calculate the adjusted sampling probabilities
 adjusted_probabilities <- table(data$Phase) / sum(table(data$Phase))
 adjusted_probabilities
-# Sample the remaining slots from developers, ensuring each company is represented
+
+
 additional_samples <- data %>%
   anti_join(unique_samples, by = "ChangeID") %>%  # Exclude already sampled developers
   sample_n(size = remaining_slots, replace = TRUE, prob = adjusted_probabilities) %>%
   ungroup()
 
-# Combine the unique samples with additional samples
 #mysample <- bind_rows(unique_samples, additional_samples)
 #mysample
 
